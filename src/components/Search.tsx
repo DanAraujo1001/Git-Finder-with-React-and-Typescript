@@ -9,6 +9,12 @@ interface SearchProps {
 const Seacrh = ({ loadUser }: SearchProps) => {
   const [userName, setUserName] = useState("");
 
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Enter") {
+      loadUser(userName);
+    }
+  };
+
   return (
     <div className={classes.search}>
       <h2>Busque por um usuário</h2>
@@ -18,9 +24,11 @@ const Seacrh = ({ loadUser }: SearchProps) => {
           type="text"
           placeholder="Digite o nome do usuário"
           onChange={(e) => setUserName(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
-        {/* Eu não entendi direito essa função */}
+        {/*Esse onKeyDown está dando erro em alguma coisa(linha vermelha)*/}
         <button onClick={() => loadUser(userName)}>
+        {/* Eu não entendi direito essa função de button */}
           <BsSearch />
         </button>
       </div>
