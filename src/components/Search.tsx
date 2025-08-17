@@ -32,7 +32,7 @@ const Seacrh = ({ loadUser }: SearchProps) => {
           <BsSearch />
         </button>
       </div>
-    </div>
+    </div>  
   );
 };
 

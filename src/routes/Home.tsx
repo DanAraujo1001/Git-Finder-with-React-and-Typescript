@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Search from "../components/Search";
+import User from "../components/User";
 import type { UserProps } from "../types/user";
 
 function Home() {
@@ -26,8 +27,8 @@ function Home() {
   return (
     <div>
       <Search loadUser={loadUser} />
-
-      {user && <p>{user.login}</p>}
+      {/*Como essa condição abaixo funciona?*/}
+      {user && <User {...user} />}
     </div>
   );
 }
