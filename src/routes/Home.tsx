@@ -37,7 +37,6 @@ function Home() {
   return (
     <div>
       <Search loadUser={loadUser} />
-      {/*Como essa condição abaixo funciona?*/}
       {user && <User {...user} />}
       {error && <Error />}
     </div>
