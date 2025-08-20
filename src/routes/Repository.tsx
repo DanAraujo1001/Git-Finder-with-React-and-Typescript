@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import type { RepositoryProps } from "../types/repository";
+import RepositoryList from "../components/RepositoryList";
 
 function Repository() {
   const { userName } = useParams();
@@ -37,17 +38,7 @@ function Repository() {
   if (!repos) return <p>Carregando...</p>;
 
   return (
-    <div>
-      {repos.map((repo) => (
-        <div key={repo.id}>
-          <p>{repo.name}</p>
-          <p>{repo.html_url}</p>
-          <p>{repo.language}</p>
-          <p>{repo.stargazers_count}</p>
-          <p>{repo.forks_count}</p>
-        </div>
-      ))}
-    </div>
+    <RepositoryList repos={repos} userName={userName} />
   );
 }
 
