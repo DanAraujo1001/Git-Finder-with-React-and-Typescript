@@ -1,3 +1,25 @@
+.voltar {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #2b3566;
+  border: 1px solid #9da5d1;
+  border-radius: 4px;
+  padding: 8px 12px;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.voltar:hover {
+  opacity: 1;
+}
+
+h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .repoList {
   display: flex;
   flex-direction: column;
@@ -5,10 +27,4 @@
   background-color: #2b3566;
   padding: 2rem;
   border-radius: 1rem;
-}
-
-h2 {
-  font-size: 1.2rem;
-  text-align: center;
-  margin-bottom: 2rem;
 }

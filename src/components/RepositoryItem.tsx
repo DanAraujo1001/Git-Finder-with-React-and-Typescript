@@ -29,7 +29,7 @@ const RepositoryItem = ({
           <span>{forks_count}</span>
         </div>
       </div>
-      <Link to={html_url}>
+      <Link to={html_url} target="_blank">
         Ver código
         <span>
           <LuBookMarked />
